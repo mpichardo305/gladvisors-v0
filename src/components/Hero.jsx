@@ -32,11 +32,11 @@ export function Hero() {
         distinguished clients.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button style={{ width: '150px', height: '50px' }} href="/register">
+        <Button style={{ width: '150px', height: '50px', fontSize: '16px'  }} href="/register">
           Get started
         </Button>
         <Button
-          style={{ width: '150px', height: '50px' }}
+          style={{ width: '150px', height: '50px', fontSize: '16px'  }}
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
         >

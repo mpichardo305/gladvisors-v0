@@ -49,11 +49,11 @@ export function WhyUs() {
             <Button
               style={{
                 color: 'white',
-                backgroundColor: '#0ccc94', // Light green color
+                backgroundColor: '#08A665', // Light green color
                 borderRadius: '0.375rem',
-                border: '1px solid #0ccc94', // Light green border
+                border: '1px solid #08A665', // Light green border
                 padding: '0.5rem 1rem',
-                fontSize: '1.125rem',
+                fontSize: '16px',
                 cursor: 'pointer',
                 marginRight: '1rem', // Add margin to right
               }}
@@ -66,7 +66,7 @@ export function WhyUs() {
                 borderRadius: '9999px',
                 backgroundColor: 'black',
                 padding: '0.25rem 1rem',
-                fontSize: '1.125rem',
+                fontSize: '16px',
                 color: 'white',
                 cursor: 'pointer',
               }}

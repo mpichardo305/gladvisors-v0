@@ -63,7 +63,7 @@ export function PrimaryFeatures() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Unlock Your Potential with Our Prestigious Firm
           </h2>
-          <p className="mt-10 text-lg tracking-tight text-white">
+          <p className="mt-10 text-lg tracking-tight text-white" >
             At our firm, we offer a unique opportunity for talented individuals
             to join our prestigious financial planning practice. With our regal
             design and industry expertise, we provide the perfect environment

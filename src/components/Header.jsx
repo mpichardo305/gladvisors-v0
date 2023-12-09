@@ -115,8 +115,8 @@ export function Header() {
               className="border-8 hover:bg-white hover:text-black"
               style={{
                 backgroundColor: ({ isActive }) =>
-                  isActive ? 'black' : '#0ccc94',
-                borderColor: '#0ccc94',
+                  isActive ? 'black' : '#08A665',
+                borderColor: '#08A665',
               }}
               href="tel:3053716333"
             >
@@ -129,7 +129,7 @@ export function Header() {
               </div>
             </Button>
 
-            <Button href="/register" color="blue">
+            <Button href="/register" color="blue" style={{fontSize: '16px'}} >
               <span>
                 Get started <span className="hidden lg:inline"></span>
               </span>
