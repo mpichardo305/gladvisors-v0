@@ -10,19 +10,19 @@ export default function Register() {
   return (
     <>
       <Head>
-        <title>Thank you for your interest</title>
+        <title>Getting started</title>
       </Head>
       <AuthLayout>
         <div className="flex flex-col">
           <Link href="/" aria-label="Home">
             <Logo className="h-10 w-auto" />
           </Link>
-          <div className="mt-20">
+          <div>
             <h2 className="text-lg font-semibold text-gray-900">
-              Input your contact information
+              Fill out the form to get started with our firm
             </h2>
             <p className="mt-2 text-sm text-gray-700">
-              We will contact you shortly
+              We will contact you shortly for next steps
             </p>
           </div>
         </div>
