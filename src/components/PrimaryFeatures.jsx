@@ -48,7 +48,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-white-600 pb-28 pt-20 sm:py-32"
+      className="bg-white-600 relative overflow-hidden pb-28 pt-20 sm:py-32"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -59,11 +59,11 @@ export function PrimaryFeatures() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none mt-10">
+        <div className="mt-10 max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Unlock Your Potential with Our Prestigious Firm
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-white mt-10">
+          <p className="mt-10 text-lg tracking-tight text-white">
             At our firm, we offer a unique opportunity for talented individuals
             to join our prestigious financial planning practice. With our regal
             design and industry expertise, we provide the perfect environment
@@ -83,19 +83,13 @@ export function PrimaryFeatures() {
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
-                        selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5'
+                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6	'
                       )}
                     >
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
-                            selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white'
+                            'cursor-default font-display text-lg text-blue-100 lg:text-white [&:not(:focus-visible)]:focus:outline-none'
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -104,10 +98,7 @@ export function PrimaryFeatures() {
                       </h3>
                       <p
                         className={clsx(
-                          'mt-2 hidden text-sm lg:block',
-                          selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white'
+                          'mt-2 hidden text-sm text-blue-100 lg:block'
                         )}
                       >
                         {feature.description}
@@ -139,7 +130,7 @@ export function PrimaryFeatures() {
                             border: '1px solid black',
                             padding: '0.5rem 1rem',
                             fontSize: '1.125rem',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
                           }}
                         >
                           <span>Learn More</span>
@@ -151,7 +142,7 @@ export function PrimaryFeatures() {
                             padding: '0.25rem 1rem',
                             fontSize: '1.125rem',
                             color: 'white',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
                           }}
                           href="/register"
                         >

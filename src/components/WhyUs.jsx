@@ -28,7 +28,7 @@ export function WhyUs() {
             <ul role="list">
               {reasons.map((reason, reasonIndex) => (
                 <li key={reasonIndex} className="flex flex-col gap-y-8">
-                  <div className="font-display text-lg leading-7 text-slate-900">
+                  <div className="flex font-display text-lg leading-7 text-slate-900">
                     <CheckIcon
                       style={{ marginRight: '10px' }}
                       className="h-6 w-6 text-gray-500"

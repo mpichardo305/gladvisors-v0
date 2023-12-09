@@ -112,8 +112,7 @@ export function Header() {
               />
             </div>
             <Button
-              className="border-8"
-              // Change backgroundColor based on state
+              className="border-8 hover:bg-white hover:text-black "
               style={{
                 backgroundColor: ({ isActive }) =>
                   isActive ? 'black' : '#0ccc94',
@@ -124,9 +123,9 @@ export function Header() {
               }}
               href="tel:3053716333"
             >
-              <div className="flex items-center gap-x-2 md:gap-x-4">
+              <div className="gap-x-2md:gap-x-4 flex items-center">
                 <PhoneIcon
-                  className="h-6 w-6 text-blue-500"
+                  className="h-6 w-6 text-blue-500 "
                   href="tel:3053716333"
                 />
                 305-371-6333
