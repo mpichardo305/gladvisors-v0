@@ -91,7 +91,7 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10">
+    <header className="py-0">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -112,14 +112,11 @@ export function Header() {
               />
             </div>
             <Button
-              className="border-8 hover:bg-white hover:text-black "
+              className="border-8 hover:bg-white hover:text-black"
               style={{
                 backgroundColor: ({ isActive }) =>
                   isActive ? 'black' : '#0ccc94',
                 borderColor: '#0ccc94',
-                ':hover': {
-                  backgroundColor: 'black',
-                },
               }}
               href="tel:3053716333"
             >

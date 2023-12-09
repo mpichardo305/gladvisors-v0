@@ -49,7 +49,7 @@ export function Hero() {
           <span className="ml-3">Learn more</span>
         </Button>
       </div>
-      <div className="mt-36 lg:mt-34">
+      <div className="mt-32 lg:mt-34">
         <p className="font-display text-base text-slate-900">
           Trusted by the premier financial services firm in Florida
         </p>

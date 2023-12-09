@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Join Our Elite Team of Financial Advisors</title>
+        <title>Guardian Life Advisors</title>
         <meta
           name="description"
           content="Attracting and developing exceptional talent to service our distinguished clients."
