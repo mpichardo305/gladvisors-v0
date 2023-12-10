@@ -79,6 +79,8 @@ export default function Register() {
             name="referral_source"
           >
             <option>LinkedIn Message</option>
+            <option>Email</option>
+            <option>Phone call</option>
             <option>Word of Mouth</option>
           </SelectField>
           <div className="col-span-full">
