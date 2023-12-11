@@ -46,26 +46,11 @@ export function WhyUs() {
               marginBottom: '40px',
             }}
           >
+           
             <Button
               style={{
-                color: 'white',
-                backgroundColor: '#08A665', // Light green color
-                borderRadius: '0.375rem',
-                border: '1px solid #08A665', // Light green border
-                padding: '0.5rem 1rem',
-                fontSize: '16px',
-                cursor: 'pointer',
-                marginRight: '1rem', // Add margin to right
-              }}
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            >
-              <span>Learn More</span>
-            </Button>
-            <Button
-              style={{
-                borderRadius: '9999px',
+                borderRadius: '0.5rem',
                 backgroundColor: 'black',
-                padding: '0.25rem 1rem',
                 fontSize: '16px',
                 color: 'white',
                 cursor: 'pointer',
@@ -73,6 +58,21 @@ export function WhyUs() {
               href="/register"
             >
               Get Started
+            </Button>
+            <Button
+              style={{
+                color: 'white',
+                backgroundColor: '#08A665', // Light green color
+                borderRadius: '1.5rem',
+                border: '1px solid #08A665', // Light green border
+                padding: '0.5rem 1rem',
+                fontSize: '16px',
+                cursor: 'pointer',
+                marginLeft: '2rem', // Add margin to right
+              }}
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            >
+              <span>Learn More</span>
             </Button>
           </div>
         </div>

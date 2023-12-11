@@ -38,7 +38,7 @@ const testimonials = [
         "Transitioning from a sales career to financial advising was the best decision I ever made. The firm's comprehensive training program and mentorship from experienced advisors have helped me build a successful career and make a positive impact on my clients' lives.",
       author: {
         name: 'John Smith',
-        role: 'Financial Advisor, NPC Financial, Seattle Office',
+        role: 'Financial Advisor, NPC Financial, West Palm Beach Office',
         years: '2 years',
         image: avatarImage3,
       },

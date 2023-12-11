@@ -63,7 +63,7 @@ export function PrimaryFeatures() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Unlock Your Potential with Our Prestigious Firm
           </h2>
-          <p className="mt-10 text-lg tracking-tight text-white">
+          <p className="mt-10 text-lg tracking-tight" style={{color: 'white'}}>
             At our firm, we offer a unique opportunity for talented individuals
             to join our prestigious financial planning practice. With our regal
             design and industry expertise, we provide the perfect environment
@@ -89,16 +89,16 @@ export function PrimaryFeatures() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'cursor-default font-display text-lg text-blue-100 lg:text-white [&:not(:focus-visible)]:focus:outline-none'
+                            'cursor-default font-display text-lg [&:not(:focus-visible)]:focus:outline-none'
                           )}
                         >
-                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none"  style={{color: 'black'}}/>
                           {feature.title}
                         </Tab>
                       </h3>
                       <p
                         className={clsx(
-                          'mt-2 hidden text-sm text-blue-100 lg:block'
+                          'mt-2 hidden text-sm lg:block'
                         )}
                       >
                         {feature.description}
@@ -109,10 +109,10 @@ export function PrimaryFeatures() {
               </div>
               <Tab.Panels className="lg:col-span-12">
                 {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
+                  <Tab.Panel key={feature.title} unmount={false} style={{font: 'black'}}>
                     <div className="relative sm:px-6">
                       <div className="absolute bottom-[-1.25rem] sm:inset-x-0" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                      <p className="relative mx-auto max-w-2xl text-black text-base sm:text-center" style={{ color: "black" }}>
                         {feature.description}
                       </p>
                       <div
@@ -124,8 +124,8 @@ export function PrimaryFeatures() {
                       >
                         <Button
                           style={{
-                            color: 'white',
-                            backgroundColor: 'gray',
+                            color: 'black',
+                            backgroundColor: '#32A665',
                             borderRadius: '0.375rem',
                             border: '1px solid black',
                             padding: '0.5rem 1rem',
@@ -137,12 +137,13 @@ export function PrimaryFeatures() {
                         </Button>
                         <Button
                           style={{
-                            borderRadius: '9999px',
-                            backgroundColor: 'black',
+                            borderRadius: '1.5rem',
+                            backgroundColor: 'white',
                             padding: '0.25rem 1rem',
                             fontSize: '1.125rem',
-                            color: 'white',
+                            color: 'black',
                             cursor: 'pointer',
+                            borderRadius: '1rem',
                           }}
                           href="/register"
                         >
