@@ -63,7 +63,7 @@ export function PrimaryFeatures() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Unlock Your Potential with Our Prestigious Firm
           </h2>
-          <p className="mt-10 text-lg tracking-tight text-white" >
+          <p className="mt-10 text-lg tracking-tight text-white">
             At our firm, we offer a unique opportunity for talented individuals
             to join our prestigious financial planning practice. With our regal
             design and industry expertise, we provide the perfect environment
@@ -107,11 +107,11 @@ export function PrimaryFeatures() {
                   ))}
                 </Tab.List>
               </div>
-              <Tab.Panels className="lg:col-span-7">
+              <Tab.Panels className="lg:col-span-12">
                 {features.map((feature) => (
                   <Tab.Panel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                    <div className="relative sm:px-6">
+                      <div className="absolute bottom-[-1.25rem] sm:inset-x-0" />
                       <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                         {feature.description}
                       </p>
