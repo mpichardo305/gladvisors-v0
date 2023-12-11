@@ -47,125 +47,109 @@ export function PrimaryFeatures() {
   return (
     <section
       id="why-us"
-      aria-label="Features for running your books"
+      aria-label="why-us"
       className="bg-white-600 relative overflow-hidden pb-28 pt-20 sm:py-32"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute left-1/4 top-1/3 max-w-none translate-x-[-44%] translate-y-[-32%]"
         src={backgroundImage}
         alt=""
         width={2245}
         height={1636}
         unoptimized
+        style={{ filter: 'brightness(0.8)' }}
       />
-      <Container className="relative">
-        <div className="mt-10 max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Unlock Your Potential with Our Prestigious Firm
-          </h2>
-          <p className="mt-10 text-lg tracking-tight" style={{color: 'white'}}>
-            At our firm, we offer a unique opportunity for talented individuals
-            to join our prestigious financial planning practice. With our regal
-            design and industry expertise, we provide the perfect environment
-            for you to thrive and make a difference in the lives of our clients.
-          </p>
-        </div>
-        <Tab.Group
-          as="div"
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === 'vertical'}
-        >
-          {({ selectedIndex }) => (
-            <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                  {features.map((feature, featureIndex) => (
-                    <div
-                      key={feature.title}
-                      className={clsx(
-                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6	'
-                      )}
-                    >
-                      <h3>
-                        <Tab
+      <Container className="relative grid-cols-12">
+        <div className="grid-cols-6"></div>
+        <div className="mr-10 grid-cols-12">
+          <div className="grid grid-cols-12">
+            <h2 className="col-span-6 col-start-7 font-display text-2xl text-white sm:text-4xl md:text-5xl">
+              Unlock Your Potential with Our Prestigious Firm
+            </h2>
+            <p className="text-1xl col-span-6 col-start-7 mt-10 tracking-tight text-white sm:text-3xl md:text-2xl">
+              At our firm, we offer a unique opportunity for talented
+              individuals to join our prestigious financial planning practice.
+              With our regal design and industry expertise, we provide the
+              perfect environment for you to thrive and make a difference in the
+              lives of our clients.
+            </p>
+          </div>
+          <div className="mt-2 grid grid-cols-12 lg:mt-20">
+            <Tab.Group
+              as="div"
+              className="col-span-5 col-start-7 mr-4 grid justify-end sm:mx-0 sm:overflow-visible"
+              vertical={tabOrientation === 'horizontal'}
+              grid-column="7/13"
+            >
+              {({ selectedIndex }) => (
+                <>
+                  <div className="justify-ends -mx-4 flex pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                    <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+                      {features.map((feature, featureIndex) => (
+                        <div
+                          key={feature.title}
                           className={clsx(
-                            'cursor-default font-display text-lg [&:not(:focus-visible)]:focus:outline-none'
+                            'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6	'
                           )}
                         >
-                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none"  style={{color: 'black'}}/>
-                          {feature.title}
-                        </Tab>
-                      </h3>
-                      <p
-                        className={clsx(
-                          'mt-2 hidden text-sm lg:block'
-                        )}
-                      >
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
-                </Tab.List>
-              </div>
-              <Tab.Panels className="lg:col-span-12">
-                {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false} style={{font: 'black'}}>
-                    <div className="relative sm:px-6">
-                      <div className="absolute bottom-[-1.25rem] sm:inset-x-0" />
-                      <p className="relative mx-auto max-w-2xl text-black text-base sm:text-center" style={{ color: "black" }}>
-                        {feature.description}
-                      </p>
-                      <div
-                        style={{
-                          marginTop: '40px',
-                          display: 'flex',
-                          justifyContent: 'space-evenly',
-                        }}
-                      >
-                        <Button
-                          style={{
-                            color: 'black',
-                            backgroundColor: '#32A665',
-                            borderRadius: '0.375rem',
-                            border: '1px solid black',
-                            padding: '0.5rem 1rem',
-                            fontSize: '1.125rem',
-                            cursor: 'pointer',
-                          }}
-                        >
-                          <span>Learn More</span>
-                        </Button>
-                        <Button
-                          style={{
-                            borderRadius: '1.5rem',
-                            backgroundColor: 'white',
-                            padding: '0.25rem 1rem',
-                            fontSize: '1.125rem',
-                            color: 'black',
-                            cursor: 'pointer',
-                            borderRadius: '1rem',
-                          }}
-                          href="/register"
-                        >
-                          Get Started
-                        </Button>
-                      </div>
-                    </div>
-                    {/* <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
-                    </div> */}
-                  </Tab.Panel>
-                ))}
-              </Tab.Panels>
-            </>
-          )}
-        </Tab.Group>
+                          <h3>
+                            <Tab
+                              className={clsx(
+                                'cursor-default font-display text-xl text-white [&:not(:focus-visible)]:focus:outline-none'
+                              )}
+                            >
+                              <span className="absolute inset-0 rounded-full text-white lg:rounded-l-xl lg:rounded-r-none" />
+                              {feature.title}
+                            </Tab>
+                          </h3>
+                          <p
+                            className={clsx(
+                              'mt-2 hidden text-lg text-white lg:block'
+                            )}
+                          >
+                            {feature.description}
+                          </p>
+                        </div>
+                      ))}
+                    </Tab.List>
+                  </div>
+                </>
+              )}
+            </Tab.Group>
+          </div>
+          <div className="mr-40 mt-6 flex justify-end">
+            <Button
+              grid-column="10/11"
+              style={{
+                color: 'black',
+                backgroundColor: '#32A665',
+                borderRadius: '0.375rem',
+                border: '1px solid black',
+                padding: '0.5rem 1rem',
+                fontSize: '1.125rem',
+                cursor: 'pointer',
+                marginRight: '30px',
+              }}
+            >
+              <span>Learn More</span>
+            </Button>
+            <Button
+              grid-column="12/13"
+              style={{
+                borderRadius: '1.5rem',
+                backgroundColor: 'white',
+                padding: '0.5rem 1rem',
+                fontSize: '1.125rem',
+                color: 'black',
+                cursor: 'pointer',
+                border: '1.5px solid black',
+              }}
+              href="/register"
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
       </Container>
     </section>
   )

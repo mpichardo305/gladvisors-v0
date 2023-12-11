@@ -6,8 +6,8 @@ import logoLaravel from '@/images/logos/laravel.svg'
 import logoMirage from '@/images/logos/mirage.svg'
 import logoStatamic from '@/images/logos/statamic.svg'
 import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
+import logoTransistor from '@/images/logos/NPCFinancial150150.svg'
+import logoTuple from '@/images/logos/membergnNPCFinancial150150.svg'
 
 export function Hero() {
   return (
@@ -49,9 +49,9 @@ export function Hero() {
           <span className="ml-3">Learn more</span>
         </Button>
       </div>
-      <div className="mt-32 lg:mt-34">
+      <div className="mt-32 text-lg lg:mt-34">
         <p className="font-display text-base text-slate-900">
-          Trusted by the premier financial services firm in Florida
+          Trusted by the premier financial services firm in South Florida
         </p>
         <ul
           role="list"
@@ -60,12 +60,13 @@ export function Hero() {
           {[
             [
               { name: 'NPC', logo: logoTransistor },
+              { name: 'GN', logo: logoTuple },
             ],
-            // [
-            //   { name: 'Mirage', logo: logoMirage },
-            //   { name: 'Laravel', logo: logoLaravel },
+            [
+              //{ name: 'Laravel', logo: logoLaravel },
             //   { name: 'Statamic', logo: logoStatamic },
-            // ],
+            ],
+            
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
               <ul

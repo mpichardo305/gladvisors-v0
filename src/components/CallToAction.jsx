@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/screenshots/walkingfast.jpg'
+import backgroundImage from '@/images/screenshots/walking_fast.webp'
 
 export function CallToAction() {
   return (
@@ -17,16 +17,22 @@ export function CallToAction() {
         width={2347}
         height={1244}
         unoptimized
+        style={{ filter: 'brightness(0.9)' }}
       />
       <Container className="relative">
-        <div className="mx-auto max-w-lg text-center ml-20">
-          <h2 className="font-display text-4xl tracking-tight text-black sm:text-4xl">
+        <div className="mx-auto ml-20 max-w-lg text-center">
+          <h2 className="font-display text-5xl tracking-tight text-black sm:text-5xl">
             Join our Financial Planning Team
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-black">
+          <p className="mt-4 text-xl tracking-tight text-black">
             Explore exciting opportunities in our financial planning practice.
           </p>
-          <Button href="/register" color="blue" className="mt-10" style={{ width: '150px', height: '50px', fontSize: '16px'  }}>
+          <Button
+            href="/register"
+            color="blue"
+            className="mt-10"
+            style={{ width: '150px', height: '50px', fontSize: '16px' }}
+          >
             Get started
           </Button>
         </div>
