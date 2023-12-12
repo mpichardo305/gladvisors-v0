@@ -27,7 +27,7 @@ export default function Register() {
           </div>
         </div>
         <form
-          action="#"
+          action="/thank-you"
           className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2"
         >
           <TextField

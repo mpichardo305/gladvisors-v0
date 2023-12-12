@@ -95,7 +95,7 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
@@ -129,7 +129,7 @@ export function Header() {
               </div>
             </Button>
 
-            <Button href="/register" color="blue" style={{fontSize: '16px'}} >
+            <Button href="/register" color="blue" style={{ fontSize: '16px' }}>
               <span>
                 Get started <span className="hidden lg:inline"></span>
               </span>
