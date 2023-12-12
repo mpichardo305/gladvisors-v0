@@ -30,17 +30,25 @@ export function PrimaryFeatures() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
-    function onMediaQueryChange({ matches }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+    function onMediaQueryChange(mediaQueryList) {
+      if (mediaQueryList.matches) {
+        setTabOrientation('vertical')
+      } else {
+        setTabOrientation('horizontal')
+      }
     }
 
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    // Set up media query listeners
+    const lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    const mobileMediaQuery = window.matchMedia('(max-width: 768px)')
+    mobileMediaQuery.addEventListener('change', onMediaQueryChange)
+
+    // Initialize tab orientation
+    onMediaQueryChange(mobileMediaQuery)
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+      // Clean up listeners
+      mobileMediaQuery.removeEventListener('change', onMediaQueryChange)
     }
   }, [])
 
@@ -74,58 +82,60 @@ export function PrimaryFeatures() {
               lives of our clients.
             </p>
           </div>
-          <div className="mt-2 grid grid-cols-12 lg:mt-20">
-            <Tab.Group
-              as="div"
-              className="col-span-5 col-start-7 mr-4 grid justify-end sm:mx-0 sm:overflow-visible"
-              vertical={tabOrientation === 'horizontal'}
-              grid-column="7/13"
-            >
-              {({ selectedIndex }) => (
-                <>
-                  <div className="justify-ends -mx-4 flex pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                    <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                      {features.map((feature, featureIndex) => (
-                        <div
-                          key={feature.title}
-                          className={clsx(
-                            'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6	'
-                          )}
-                        >
-                          <h3>
-                            <Tab
-                              className={clsx(
-                                'cursor-default font-display text-xl text-white [&:not(:focus-visible)]:focus:outline-none'
-                              )}
-                            >
-                              <span className="absolute inset-0 rounded-full text-white lg:rounded-l-xl lg:rounded-r-none" />
-                              {feature.title}
-                            </Tab>
-                          </h3>
-                          <p
+          {tabOrientation === 'horizontal' && (
+            <div className="mt-2 grid grid-cols-12 lg:mt-20">
+              <Tab.Group
+                as="div"
+                className="col-span-5 col-start-7 mr-4 grid justify-end sm:mx-0 sm:overflow-visible"
+                vertical={tabOrientation === 'vertical'}
+                grid-column="7/13"
+              >
+                {({ selectedIndex }) => (
+                  <>
+                    <div className="justify-ends -mx-4 flex pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                      <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+                        {features.map((feature, featureIndex) => (
+                          <div
+                            key={feature.title}
                             className={clsx(
-                              'mt-2 hidden text-lg text-white lg:block'
+                              'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6	'
                             )}
                           >
-                            {feature.description}
-                          </p>
-                        </div>
-                      ))}
-                    </Tab.List>
-                  </div>
-                </>
-              )}
-            </Tab.Group>
-          </div>
-          <div className="mr-40 mt-6 flex justify-end">
+                            <h3>
+                              <Tab
+                                className={clsx(
+                                  'cursor-default font-display text-xl text-white [&:not(:focus-visible)]:focus:outline-none'
+                                )}
+                              >
+                                <span className="absolute inset-0 rounded-full text-white lg:rounded-l-xl lg:rounded-r-none" />
+                                {feature.title}
+                              </Tab>
+                            </h3>
+                            <p
+                              className={clsx(
+                                'mt-2 hidden text-lg text-white lg:block'
+                              )}
+                            >
+                              {feature.description}
+                            </p>
+                          </div>
+                        ))}
+                      </Tab.List>
+                    </div>
+                  </>
+                )}
+              </Tab.Group>
+            </div>
+          )}
+          <div className="mt-6 flex justify-end sm:pl-4 lg:mr-40">
             <Button
               grid-column="10/11"
               style={{
                 color: 'black',
                 backgroundColor: '#32A665',
-                borderRadius: '0.375rem',
                 border: '1px solid black',
                 padding: '0.5rem 1rem',
+                borderRadius: '0.5rem',
                 fontSize: '1.125rem',
                 cursor: 'pointer',
                 marginRight: '30px',
