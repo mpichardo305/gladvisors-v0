@@ -7,6 +7,32 @@ import { SelectField, TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 
 export default function Register() {
+  const handleSubmit = async (event) => {
+    event.preventDefault() // Prevent the default form submission behavior
+    const formData = new FormData(event.target)
+    const data = Object.fromEntries(formData)
+
+    // Send form data to our custom API endpoint
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      // If the request was successful, redirect or inform the user
+      if (res.ok) {
+        // For example, redirect to a thank you page
+        window.location.href = '/thank-you'
+      } else {
+        // Error handling here, e.g., showing a message to the user
+        console.error('Form submission failed')
+      }
+    } catch (error) {
+      // Network or other error handling here
+      console.error('An error occurred while submitting the form:', error)
+    }
+  }
   return (
     <>
       <Head>
@@ -27,7 +53,7 @@ export default function Register() {
           </div>
         </div>
         <form
-          action="/thank-you"
+          onSubmit={handleSubmit}
           className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2"
         >
           <TextField
