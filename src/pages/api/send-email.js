@@ -5,14 +5,16 @@ import nodemailer from 'nodemailer' // You will install this package if not alre
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Your email server credentials and the destination email
+    const nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
       // Example for SMTP transporter
-      host: 'smtp.example.com',
+      host: 'smtp.gmail.com',
       port: 587,
       secure: false,
+      requireTLS: true,
       auth: {
-        user: 'user@example.com',
-        pass: 'password',
+        user: 'michael@guardianlifeadvisors.com',
+        pass: 'kkay uqzv vfzu bdfg',
       },
     })
 
@@ -24,12 +26,13 @@ export default async function handler(req, res) {
       linkedin_profile,
       referral_source,
     } = req.body
+    //kkay uqzv vfzu bdfg
 
     try {
       // Send email via your transporter configuration
       await transporter.sendMail({
         from: '"GL Advisors" <michael@guardianlifeadvisors.com>',
-        to: 'robert_newman@npc', // Destination email
+        to: 'mpichardo305@gmail.com', // robert_newman@npcfinancial.com
         subject: 'New Registration',
         text: `New registration details:
 First Name: ${first_name}
