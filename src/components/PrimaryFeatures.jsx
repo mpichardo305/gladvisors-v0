@@ -35,9 +35,9 @@ export function PrimaryFeatures() {
       id="why-us"
       aria-label="why-us"
       style={{'--image-url': `url(${whyUsUrl})`}} 
-      className="flex flex-col items-start overflow-hidden bg-white-600 py-20 px-8 sm:px-12 md:px-16 bg-cover bg-no-repeat bg-top-left bg-[image:var(--image-url)]"
+      className="flex flex-col items-start md:items-end lg:items-start overflow-hidden bg-white-600 py-20 px-8 sm:px-12 md:px-16 md:bg-[75%_center] bg-cover bg-no-repeat lg:bg-[top_left] bg-[image:var(--image-url)]"
     >
-      <Container className="flex flex-col gap-4 bg-slate-500/75 lg:bg-slate-500/50 mx-0 lg:w-[40%] md:w-[100%] p-10 rounded-4xl">
+      <Container className="flex flex-col gap-4 bg-slate-500/75 md:bg-slate-500/50 mx-0 sm:w-[100%] md:w-[50%] lg:w-[40%] p-10 rounded-4xl">
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-bold text-white lg:text-3xl font-display sm:text-1xl md:text-2xl">
             Unlock Your Potential with Our Prestigious Firm
