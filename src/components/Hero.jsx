@@ -32,11 +32,14 @@ export function Hero() {
         distinguished clients.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button style={{ width: '150px', height: '50px', fontSize: '16px'  }} href="/register">
+        <Button
+          style={{ width: '150px', height: '50px', fontSize: '16px' }}
+          href="/register"
+        >
           Get started
         </Button>
         <Button
-          style={{ width: '150px', height: '50px', fontSize: '16px'  }}
+          style={{ width: '150px', height: '50px', fontSize: '16px' }}
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
         >
@@ -49,7 +52,7 @@ export function Hero() {
           <span className="ml-3">Learn more</span>
         </Button>
       </div>
-      <div className="mt-32 text-lg lg:mt-34">
+      <div className="lg:mt-34 mt-32 text-lg">
         <p className="font-display text-base text-slate-900">
           Trusted by the premier financial services firm in South Florida
         </p>
@@ -59,14 +62,21 @@ export function Hero() {
         >
           {[
             [
-              { name: 'NPC', logo: logoTransistor },
-              { name: 'GN', logo: logoTuple },
+              {
+                name: 'NPC',
+                logo: logoTransistor,
+                url: 'http://www.npcfinancial.com',
+              },
+              {
+                name: 'GN',
+                logo: logoTuple,
+                url: 'http://www.guardianlife.com',
+              },
             ],
             [
               //{ name: 'Laravel', logo: logoLaravel },
-            //   { name: 'Statamic', logo: logoStatamic },
+              //   { name: 'Statamic', logo: logoStatamic },
             ],
-            
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
               <ul
@@ -75,7 +85,17 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <a
+                      href={company.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={company.logo}
+                        alt={company.name}
+                        unoptimized
+                      />
+                    </a>
                   </li>
                 ))}
               </ul>

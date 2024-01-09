@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     try {
       // Send email via your transporter configuration
       await transporter.sendMail({
-        from: '"GL Advisors" <michael@guardianlifeadvisors.com>',
+        from: '"Michael from Guardian Life Advisors" <michael@guardianlifeadvisors.com>',
         to: 'mpichardo305@gmail.com', // robert_newman@npcfinancial.com
         subject: 'New Registration',
         text: `New registration details:

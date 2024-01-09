@@ -75,11 +75,10 @@ export function PrimaryFeatures() {
               Unlock Your Potential with Our Prestigious Firm
             </h2>
             <p className="text-1xl col-span-6 col-start-7 mt-10 tracking-tight text-white sm:text-3xl md:text-2xl">
-              At our firm, we offer a unique opportunity for talented
-              individuals to join our prestigious financial planning practice.
-              With our regal design and industry expertise, we provide the
-              perfect environment for you to thrive and make a difference in the
-              lives of our clients.
+              At our firm, we are looking for talented individuals ready to make
+              a real impact in the world of financial planning. Our firm offers
+              a unique blend of traditional values and innovative practices,
+              providing the ideal setting for ambitious professionals.
             </p>
           </div>
           {tabOrientation === 'horizontal' && (

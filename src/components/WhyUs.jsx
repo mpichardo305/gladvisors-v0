@@ -4,11 +4,17 @@ import { CheckIcon } from '@heroicons/react/solid'
 import screenshotPayroll from '@/images/screenshots/blue_sweater_man.webp'
 
 const reasons = [
-  {
-    reason: 'Opportunities for Growth and Development',
-  },
   { reason: 'Supportive Work Environment' },
   { reason: 'Entrepreneurial Culture' },
+  {
+    reason: 'Industry Expertise',
+  },
+  {
+    reason: 'Professional Growth',
+  },
+  {
+    reason: 'Client Impact',
+  },
 ]
 export function WhyUs() {
   return (
