@@ -108,7 +108,7 @@ export function Header() {
               <span className="text-black-500 ">Call us today </span>
               <ArrowRightIcon
                 className="text-black-500 h-6 w-6"
-                href="tel:3053716333"
+                href="tel:3053988315"
               />
             </div>
             <Button
