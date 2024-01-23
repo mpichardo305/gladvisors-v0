@@ -100,7 +100,7 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#why-us">Why Us</NavLink>
-              <NavLink href="/gallery">Gallery</NavLink>
+              <NavLink href="/photogallery">Gallery</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
             </div>
           </div>
