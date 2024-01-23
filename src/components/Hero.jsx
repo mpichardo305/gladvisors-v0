@@ -40,7 +40,7 @@ export function Hero() {
         </Button>
         <Button
           style={{ width: '150px', height: '50px', fontSize: '16px' }}
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://youtu.be/NIDDghOn7Rs"
           variant="outline"
         >
           <svg
