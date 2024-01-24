@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import avatarImage1 from '@/images/avatars/avatar-1.png'
+import avatarImage1 from '@/images/avatars/avatar_1.png'
 import avatarImage2 from '@/images/avatars/avatar-2.png'
-import avatarImage3 from '@/images/avatars/avatar-3.png'
-import avatarImage4 from '@/images/avatars/avatar-4.png'
+import avatarImage3 from '@/images/avatars/avatar_3.png'
+import avatarImage4 from '@/images/avatars/avatar_4.png'
 import avatarImage5 from '@/images/avatars/avatar-5.png'
 
 const testimonials = [
@@ -13,22 +13,10 @@ const testimonials = [
       content:
         'Working at the firm has been an incredible experience. The supportive team and opportunities for growth have exceeded my expectations.',
       author: {
-        name: 'Sheryl Berge',
+        name: 'Kyria Popovitch',
         role: 'Financial Advisor, NPC Financial, Miami Office',
-        years: '5 years',
-        image: avatarImage1,
-      },
-    },
-  ],
-  [
-    {
-      content:
-        'I have been with the firm for several years now, and I can confidently say that it is a fantastic place to work. The collaborative environment and focus on client success make every day rewarding.',
-      author: {
-        name: 'Amy Hahn',
-        role: 'Financial Advisor, NPC Financial, Destin Office',
         years: '10 years',
-        image: avatarImage4,
+        image: avatarImage1,
       },
     },
   ],
@@ -37,7 +25,19 @@ const testimonials = [
       content:
         "Transitioning from a sales career to financial advising was the best decision I ever made. The firm's comprehensive training program and mentorship from experienced advisors have helped me build a successful career and make a positive impact on my clients' lives.",
       author: {
-        name: 'John Smith',
+        name: 'Sean Neal',
+        role: 'Financial Advisor, NPC Financial, Destin Office',
+        years: '2 years',
+        image: avatarImage4,
+      },
+    },
+  ],
+  [
+    {
+      content:
+        'I have been with the firm for 2 years now, and I can confidently say that it is a fantastic place to work. The collaborative environment and focus on client success make every day rewarding.',
+      author: {
+        name: 'Daniella Vincson',
         role: 'Financial Advisor, NPC Financial, West Palm Beach Office',
         years: '2 years',
         image: avatarImage3,

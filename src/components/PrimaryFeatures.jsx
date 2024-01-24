@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/screenshots/woman_shake.webp'
+import backgroundImage from '@/images/screenshots/woman_shake2.webp'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
@@ -139,6 +139,7 @@ export function PrimaryFeatures() {
                 cursor: 'pointer',
                 marginRight: '30px',
               }}
+              href="https://youtu.be/NIDDghOn7Rs"
             >
               <span>Learn More</span>
             </Button>

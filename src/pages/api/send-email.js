@@ -18,28 +18,21 @@ export default async function handler(req, res) {
       },
     })
 
-    const {
-      first_name,
-      last_name,
-      phone,
-      email,
-      linkedin_profile,
-      referral_source,
-    } = req.body
+    const { first_name, last_name, phone, email, referral_source } = req.body
     //kkay uqzv vfzu bdfg
 
     try {
       // Send email via your transporter configuration
       await transporter.sendMail({
         from: '"Michael from Guardian Life Advisors" <michael@guardianlifeadvisors.com>',
-        to: 'mpichardo305@gmail.com', // robert_newman@npcfinancial.com
+        to: 'robert_newman@npcfinancial.com',
+        cc: 'mpichardo305@gmail.com',
         subject: 'New Registration',
         text: `New registration details:
 First Name: ${first_name}
 Last Name: ${last_name}
 Phone: ${phone}
 Email: ${email}
-LinkedIn URL: ${linkedin_profile}
 Referral Source: ${referral_source}`,
         // For HTML email body, use `html` key instead of `text`
       })

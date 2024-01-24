@@ -28,8 +28,8 @@ export function Hero() {
         of financial advisors
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Attracting and developing exceptional talent to service our
-        distinguished clients.
+        Attracting and developing exceptional financial professionals to shape
+        our clients futures.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button

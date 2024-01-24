@@ -90,24 +90,24 @@ export default function Register() {
             autoComplete="email"
             required
           />
-          <TextField
+          {/* <TextField
             className="col-span-full"
             label="LinkedIn URL"
             id="email"
             name="linkedin_profile"
             type="url"
             required
-          />
+          /> */}
           <SelectField
             className="col-span-full"
             label="How did you hear about us?"
             id="referral_source"
             name="referral_source"
           >
-            <option>LinkedIn Message</option>
-            <option>Email</option>
-            <option>Phone call</option>
             <option>Word of Mouth</option>
+            <option>Email</option>
+            <option>LinkedIn Message</option>
+            <option>Phone call</option>
           </SelectField>
           <div className="col-span-full">
             <Button

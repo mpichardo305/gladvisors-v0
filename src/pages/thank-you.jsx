@@ -16,7 +16,7 @@ export function Disclosure() {
       <Container id="thank-you">
         <div className="py-20 text-center text-lg">
           <h1 className="font-semibold text-gray-900">
-            Thank you for your submission 🎊 🎉
+            Thank you for your submission!
           </h1>
           <h2 className="py-4 text-gray-900">
             We will be in touch with next steps

@@ -52,7 +52,6 @@ export function WhyUs() {
               marginBottom: '40px',
             }}
           >
-           
             <Button
               style={{
                 borderRadius: '0.5rem',
@@ -76,7 +75,7 @@ export function WhyUs() {
                 cursor: 'pointer',
                 marginLeft: '2rem', // Add margin to right
               }}
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://youtu.be/NIDDghOn7Rs"
             >
               <span>Learn More</span>
             </Button>
